@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML&CSS project</title>
+  <!-- css files -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- header start -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Web developer</h1>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li class="nav-link"><a href="#home">Home</a></li>
+          <li class="nav-link"><a href="#about">About</a></li>
+          <li class="nav-link"><a href="#service">service</a></li>
+          <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
+          <li class="nav-link"><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="home" class="hero-page">
+      <!-- hero-page content -->
+      <div class="hero-page-content">
+        <h2>
+          <span style="font-size: 50px">&#9995;</span><br />
+          Hi, Web developer is here.
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati,
+          ratione animi aspernatur vitae quo expedita, eius libero labore
+          nihil dolorem quasi omnis accusamus suscipit velit quis quisquam,
+          eos hic ab.
+        </p>
+        <button class="button">More!</button>
+      </div>
+      <!-- hero img -->
+      <div class="hero-img">
+        <img src="images/programmer-setup.png" alt="" />
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+  <main>
+
+    <!-- About start -->
+    <section id="about">
+      <div class="about-info">
+        <div class="about-img">
+          <img src="images/programmer-about.png" alt="" srcset="" />
+        </div>
+        <div class="about-content">
+          <h3>About ME</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quasi odio officia, sit quae reiciendis
+            voluptate fuga sequi fugit totam sed praesentium mollitia labore ut, libero ducimus! Similique, odio! Sed!
+          </p>
+          <button class="button">Download CV</button>
+        </div>
+      </div>
+    </section>
+    <!-- About end -->
+
+    <!-- Service start -->
+    <section id="service">
+      <div class="service-container">
+        <h3>Services</h3>
+        <div class="service-cards">
+          <div class="service-card">
+            <div class="icon-service-card">
+              <img src="images/file-regular.svg" alt="" srcset="" />
+            </div>
+            <h4>Wordpress Theme</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              commodi quo ad nobis repudiandae natus eveniet quis, ab tempora
+              quam perspiciatis vitae accusantium tempore.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="icon-service-card">
+              <i><img src="images/clock-regular.svg" alt="" srcset="" /></i>
+            </div>
+            <h4>Responsive design</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              commodi quo ad nobis repudiandae natus eveniet quis, ab tempora
+              quam perspiciatis vitae accusantium tempore.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="icon-service-card">
+              <img src="images/book-open-solid.svg" alt="" srcset="" />
+            </div>
+            <h4>Media & Advertismenets</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              commodi quo ad nobis repudiandae natus eveniet quis, ab tempora
+              quam perspiciatis vitae accusantium tempore.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service end -->
+
+    <!-- portfolio start -->
+    <section id="portfolio">
+      <div class="showcase">
+        <!-- showcase header start -->
+        <div class="showcase-header">
+          <h3><span>Recent works</span><br />
+            Work Showcase
+          </h3>
+          <span class="after"></span>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet.
+          </p>
+        </div>
+        <!-- showcase header end -->
+        <ul class="switcher">
+          <li class="active" data-cat=".all">All Work</li>
+          <li data-cat=".web">Web</li>
+          <li data-cat=".gfx">Graphic</li>
+          <li data-cat=".marketing">Marketing</li>
+        </ul>
+        <div class="gallery">
+          <img class="all gfx" src="images/portfolio-1.jpg" alt="" />
+          <img class="all gfx" src="images/portfolio-2.jpg" alt="" />
+          <img class="all web" src="images/portfolio-3.jpg" alt="" />
+          <img class="all web" src="images/portfolio-4.jpg" alt="" />
+          <img class="all marketing" src="images/portfolio-5.jpg" alt="" />
+          <img class="all gfx" src="images/portfolio-6.jpg" alt="" />
+          <img class="all gfx" src="images/portfolio-7.jpg" alt="" />
+          <img class="all marketing" src="images/portfolio-8.jpg" alt="" />
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skills-header">
+          <h3>
+            <span>My pocket</span><br />
+            My Skills
+          </h3>
+          <span class="after"></span>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="skills-container">
+          <div class="left">
+            <h4>My creative skills</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi ex sed saepe dolorum. Neque a
+              repudiandae beatae, amet ab voluptatum alias aut earum inventore. Ab doloribus vel libero rem nobis.</p>
+            <button class="button">Learn more</button>
+          </div>
+          <div class="right">
+            <ul>
+              <li class="skill-card">
+                <div class="skill-icon">
+                </div>
+                <div class="info">
+                  <span>HTML</span>
+                  <span>90%</span>
+                </div>
+                <div class="bar html"></div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-icon">
+                </div>
+                <div class="info">
+                  <span>CSS</span>
+                  <span>80%</span>
+                </div>
+                <div class="bar css"></div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-icon">
+                </div>
+                <div class="info">
+                  <span>Javascript</span>
+                  <span>60%</span>
+                </div>
+                <div class="bar javascript"></div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-icon">
+                  <!-- <img src="images/php-code.png" alt=""> -->
+                </div>
+                <div class="info">
+                  <span>PHP</span>
+                  <span>45%</span>
+                </div>
+                <div class="bar php"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio end -->
+
+    <!-- contanct start -->
+    <section id="contact">
+      <div class="contact-header">
+        <h3>
+          <span>Drop us a note</span><br />
+          Contact Us.
+        </h3>
+        <span class="after"></span>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="contact-container">
+        <div class="part-1">
+          <div class="contact-img">
+            <img src="images/call-to-action-bg-2.jpg" alt="">
+          </div>
+          <div class="contact-form">
+            <input type="text" class="form-name" placeholder="Name" />
+            <input type="email" class="form-email" placeholder="Email" />
+            <input type="text" class="subject" placeholder="Subject" />
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="submit" class="submit-button" value="submit" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact end -->
+  </main>
+
+  <footer>
+    <div class="links">
+      <div class="about-p">
+        <h4>About</h4>
+        <p>
+          Integer posuere erat a ante venenati dapibus posuere velit aliquet.
+          Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere
+        </p>
+      </div>
+      <div class="services-links">
+        <h4>Our service</h4>
+        <ul>
+          <li><a href="">Graphic design</a></li>
+          <li><a href="">web design</a></li>
+          <li><a href="">web developement</a></li>
+        </ul>
+      </div>
+      <div class="quick-links">
+        <h4>Quick links</h4>
+        <ul>
+          <li>Partners</li>
+          <li>About</li>
+          <li>FAQ's</li>
+          <li>Badges</li>
+        </ul>
+      </div>
+      <div class="form">
+        <h4>Subscribe</h4>
+        <form class="subscribe" action="">
+          <div class="Email-input">
+            <input type="email" name="email" placeholder="Enter email" id="email-input" />
+          </div>
+          <button class="button">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+    <div class="copyrights">
+      <p>
+        Copyright&#169;2023. All rights reserved. Developed by
+        Abdelhamid Ahmed under supervision IEEE HSB.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

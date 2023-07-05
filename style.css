@@ -1,0 +1,525 @@
+/* CSS variables, more accurately known as CSS custom properties, are landing in Chrome 49. They can be useful for reducing repetition in CSS, and also for powerful runtime effects like theme switching and potentially extending/polyfilling future CSS features. */
+:root {
+  --background-color: #1f2532;
+  --background-color-secondary: #f8f9fa;
+  --main-color: #f0326b;
+  --gradient-primary: linear-gradient(100deg, #f9643d, #fe2a77);;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: gray;
+}
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+/* main elements start */
+.button {
+  background-color: #21D6BF;
+  background-image: linear-gradient(100deg, #f9643d, #fe2a77);
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition:all 1s;
+}
+.button:hover {
+  opacity: 0.5;
+}
+/* main elements end */
+/* Navbar start */
+header {
+  background-color: var(--background-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  height: 10vh;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--background-color);
+  z-index: 999;
+}
+nav .logo {
+  letter-spacing: 1.5px;
+  color: white;
+}
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+.nav-links ul li {
+  padding: 0 1rem;
+}
+.nav-links ul li a {
+  font-size: 14px;
+  color: gray;
+}
+.nav-links ul li a:hover {
+  color: var(--main-color);
+}
+/* Navbar end */
+/* hero-page start */
+.hero-page {
+  height: auto;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6rem 5rem;
+  margin: auto 0;
+  background-color: var(--background-color);
+  }
+.hero-img {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+}
+.hero-img img {
+  width: 90%;
+  height: 90%;
+  border-radius: .25rem !important;
+}
+.hero-page-content {
+  width: 50%;
+  padding-left: 30px;
+}
+.hero-page-content h2{
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* hero-page end */
+/* about start */
+#about {
+  height: auto;
+  padding: 2rem 4.5rem;
+  width: 100%;
+}
+
+#about .about-info {
+  margin: auto 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+#about .about-img {
+  width: 30%;
+  position: relative;
+}
+#about .about-img img {
+  width: 100%;
+  border-radius: 5px;
+}
+#about .about-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: var(--gradient-primary);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  z-index: -1;
+}
+#about .about-content  {
+  width: 40%;
+}
+/* about end */
+/* service section start */
+#service .service-container {
+  padding: 1rem;
+  background-image: var(--gradient-primary);
+}
+#service .service-container h3{
+  text-align: center;
+  color: #fff;
+}
+#service .service-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.service-cards .service-card {
+  text-align: center;
+  padding: 1rem;
+  width: 300px;
+  background-color: var(--background-color-secondary);
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+.service-cards .service-card:hover {
+  box-shadow: 2px 2px 2px #1b1b1b;
+  border: 2px solid #1b1b1b;
+}
+
+.service-card h4 {
+  font-size: 18px;
+  color: black;
+}
+.service-card .icon-service-card {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+.service-card .icon-service-card img {
+  width: 100%;
+  height: 100%;
+}
+/* service section end */
+/* start portfolio */
+/* work start */
+#portfolio .showcase .showcase-header {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 40px 0;
+}
+#portfolio .showcase h3 span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+}
+#portfolio .showcase h3  {
+  text-transform: capitalize;
+  font-size: 2rem;
+  position: relative;
+  margin: 0;
+}
+#portfolio .showcase .after  {
+  display: inline-block;
+  border-radius: 3px;
+  height: 4px;
+  position: relative;
+  width: 80px;
+  margin-bottom: 10px;
+  background-color: #f0326b;
+}
+#portfolio .showcase p  {
+  color: #9a9a9a;
+  margin: 0;
+}
+.switcher {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.switcher li {
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #eee;
+  min-width: 105px;
+  text-align: center;
+  transition: 0.2s;
+}
+.switcher li.active,
+.switcher li:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.gallery {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery img {
+  margin-bottom: 10px;
+  transition: 0.3s;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 300px;
+}
+/* work end */
+/* skills start */
+#portfolio .skills {
+  padding: 20px 60px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  color: #1b1b1b;
+}
+#portfolio .skills .skills-header {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 40px 0;
+}
+#portfolio .skills h3 span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+}
+#portfolio .skills h3  {
+  text-transform: capitalize;
+  font-size: 2rem;
+  position: relative;
+  margin: 0;
+}
+#portfolio .skills .after  {
+  display: inline-block;
+  border-radius: 3px;
+  height: 4px;
+  position: relative;
+  width: 80px;
+  margin-bottom: 10px;
+  background-color: #f0326b;
+}
+#portfolio .skills p  {
+  color: #9a9a9a;
+  margin: 0;
+}
+#portfolio .skills .skills-container  {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#portfolio .skills .skills-container .left {
+  width: 40%;
+}
+#portfolio .skills .skills-container .left h4 {
+  text-align: left;
+  font-size: 30px;
+}
+#portfolio .skills .skills-container .left p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+#portfolio .skills .skills-container .right  {
+  width: 40%;
+}
+#portfolio .skills .skills-container .right li {
+  margin-bottom: 15px;
+  width: 100%;
+}
+#portfolio .skills .skills-container .right .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#portfolio .skills .skills-container .right .info span {
+  font-weight: 500;
+  font-size: 18px;
+}
+#portfolio .skills .skills-container .right .bar {
+  background-color: lightgray;
+  width: 100%;
+  height: 5px;
+  position: relative;
+}
+#portfolio .skills .skills-container .right .bar::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.right .html::before {
+  width: 0;
+  animation: html 3s ease-out;
+  animation-fill-mode: forwards;
+}
+.right .css::before {
+  width: 0;
+  animation: css 3s ease-out;
+  animation-fill-mode: forwards;
+}
+.right .javascript::before {
+  width: 0;
+  animation: javascript 3s ease-out;
+  animation-fill-mode: forwards;
+}
+.right .php::before {
+  width: 0;
+  animation: php 3s ease-out;
+  animation-fill-mode: forwards;
+}
+/* animation */
+@keyframes html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes javascript {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes php {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45%;
+  }
+}
+/* end portfolio */
+/* contact start */
+#contact  {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+#contact .contact-header h3 span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+}
+#contact .contact-header h3  {
+  text-transform: capitalize;
+  font-size: 2rem;
+  position: relative;
+  margin: 0;
+}
+#contact .contact-header .after  {
+  display: inline-block;
+  border-radius: 3px;
+  height: 4px;
+  position: relative;
+  width: 80px;
+  margin-bottom: 10px;
+  background-color: #f0326b;
+}
+#contact .contact-header p  {
+  color: #9a9a9a;
+  margin: 0;
+}
+#contact .contact-container  {
+  display: flex;
+  flex-direction: column;
+}
+#contact .contact-container .part-1  {
+  display: flex;
+  padding: 0 5rem;
+  flex-direction: row;
+  align-items: center;
+}
+#contact .contact-container .part-1 .contact-img  {
+  width: 100%;
+  height: 100%;
+}
+#contact .contact-container .contact-img img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+#contact .contact-container .contact-form{
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+#contact .contact-container .contact-form input[type="text"], input[type="email"], textarea{
+  background-color: transparent;
+  padding: 0 1rem;
+  border: 1px solid salmon;
+  box-shadow: none;
+  color: #0c0c0c;
+  height: 40px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+#contact .contact-container .contact-form textarea{
+  height: auto !important;
+  padding: 1rem;
+}
+.contact-form input[type="submit"] {
+  border: none;
+  padding: 15px 0;
+  width: 100%;
+  margin: 0;
+  background: #f0326b;
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+/* contact end */
+/* start footer */
+footer .links {
+  padding: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  position: relative;
+  color: white;
+  }
+footer .links::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #1b1b1b;
+  z-index: -1;
+  }
+footer .links div {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+footer .links h4 {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+footer .links ul {
+  padding: 0;
+  margin: 0;
+}
+footer .links input {
+  color: white;
+}
+footer .copyrights {
+  text-align: center;
+  background-color: #1b1b1b;
+  border-top: 1px solid #2c2c2c;
+  padding: 20px 0;
+}
+/* end footer */
+
